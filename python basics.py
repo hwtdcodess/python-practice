@@ -266,3 +266,83 @@
     # print(line)  я это не совсем понимаю, конкретно эту конструкцию for in
 
 # file.close() - ОБЯЗАТЕЛЬНО В КОНЦЕ КАЖДОЙ РАБОТЫ С ФАЙЛОМ
+
+# WITH ... AS !!!!
+# try:
+#     with open('text.txt', 'r',encoding='utf-8') as file:
+#         print(file.read())
+# except FileNotFoundError:
+#     print('Файл не найден')
+# - в общем нужен как сокращение file.close() или чтобы файл закрывался сам при любом исходе, будь то даже ошибка
+
+
+# МОДУЛИ !!!!!
+# import time - работа со временем
+# import datetime - работа с датами
+# time.
+# import datetime as d - можно сделать "псевдоним" модулю, чтобы обращаться к функциям по нему
+# print(d.datetime.now().date().hour)
+
+# import sys, os, platform
+# import random, array (массивы), math
+# print(sys.path)
+# print(platform.system())
+
+# from math import sqrt as s - из модуля импортируем исключительно отдельную функцию
+# print(s(100))
+
+# import mymodule as my- импортировал свой модуль из файла
+# print(my.name)
+# my.hello
+
+# from mymodule import add_three_numbers as add
+# print(add(5,3,2))
+
+# https://pypi.org/
+
+# import cowsay - установил модуль
+# cowsay.cow('Hello')
+
+
+# ООП !!!!!!!!!!!!!
+
+# class Cat:
+#     name = None
+#     age = None
+#     isHappy = None
+#     some = [], (),{}
+    # 
+    # def __init__(self, name= None, age= None, isHappy= None):
+    #     self.name = name
+    #     self.age = age
+    #     self.isHappy = isHappy
+    # 
+    #     self.set_data(name, age, isHappy)
+    #     self.get_data()
+    # def set_data(self, name = None, age = None, isHappy = None): # - если пользователь укажет/не укажен нужный параметр, то его значение будет "None", вместо ошибки. можно указывать и другие значения
+    #     self.name = name
+    #     self.age = age
+    #     self.isHappy = isHappy
+    # 
+    # def get_data(self):
+    #     print(self.name, ' age:', self.age, ' Happy:', self.isHappy)
+# 
+# cat1 = Cat('Barsik', 3, True) # - с конструктором можно передавать значения прям через класс
+
+# cat1.set_data('Barsik', 3, True)
+
+# cat1.name = 'Barsik'
+# cat1.age = 3
+# cat1.isHappy = True
+
+# cat2 = Cat('Jopen', 2, False) # - даже если не буду ничего передавать, то выведятся значения None
+
+# cat2.set_data('Jopen', 2, False)
+
+# cat2.age = 2
+# cat2.name = 'Jopen'
+# cat2.isHappy = False
+
+
+# cat1.get_data()
+# cat2.get_data()
